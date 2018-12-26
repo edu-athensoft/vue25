@@ -2,7 +2,7 @@ var  vm = new Vue({
     el: '#vue_det',
     data: {
        firstname : "Athens",
-       lastname  : "Singh",
+       lastname  : "Zhang",
        address    : "Mumbai"
     },
     methods: {
