@@ -1,7 +1,7 @@
 var  vm = new Vue({
     el: '#vue_det',
     data: {
-       firstname : "Ria",
+       firstname : "Athens",
        lastname  : "Singh",
        address    : "Mumbai"
     },
