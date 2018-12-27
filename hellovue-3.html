@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VueJs Hello Vue</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app-3">
+        <p v-if="seen">IF 现在你看到我了</p>
+        <p v-else>ELSE 现在你看到我了</p>
+    </div>
+
+    <script>
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: true
+            }
+        })
+    </script>
+</body>
+
+</html>

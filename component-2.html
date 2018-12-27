@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "./js/vue/vue.js"></script>
+   </head>
+   <body>
+        <div id="props-demo">
+            <blog-post title="My journey with Vue"></blog-post>
+            <blog-post title="Blogging with Vue"></blog-post>
+            <blog-post title="Why Vue is so fun"></blog-post>
+        </div>
+
+        <script>
+            Vue.component('blog-post', {
+                props: ['title'],
+                template: '<h3>{{ title }}</h3>'
+            });    
+
+            var vm = new Vue({ 
+                el: '#props-demo' 
+            }); 
+          
+        </script>
+   </body>
+</html>

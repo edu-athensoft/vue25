@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VueJs for</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ foo }}</p>
+        
+        <button v-on:click="foo = 'baz'">Change it</button>
+    </div>
+
+    <script>
+        var obj = {
+            foo: 'bar'
+        }
+
+        // Object.freeze(obj)
+
+        new Vue({
+            el: '#app',
+            data: obj
+        })
+    </script>
+</body>
+
+</html>

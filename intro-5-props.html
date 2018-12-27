@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>VueJs Props</title>
+      <script type = "text/javascript" src = "./js/vue/vue.js"></script>
+   </head>
+   <body>
+
+      <p>{{props-demo-simple[0]}}</p>
+      <script type = "text/javascript">
+        
+         // direct instance creation
+         var vm = new Vue();
+         Vue.component('props-demo-simple', {
+            props: ['size', 'myMessage']
+         });
+
+         
+         // var myComponentInstance = new Component();
+         // console.log(myComponentInstance.lname);
+         // console.log(myComponentInstance.$data);
+      </script>
+   </body>
+</html>

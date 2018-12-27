@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>VueJs Instance</title>
+      <script type = "text/javascript" src = "./js/vue/vue.js"></script>
+   </head>
+   <body>
+        <div id="components-demo">
+            <button-counter></button-counter>
+        </div>
+
+        <div id="components-demo2">
+            <mycomp></mycomp>
+        </div>
+
+        <script>
+            Vue.component('button-counter', {
+                data: function () {
+                    return {
+                    count: 0
+                    }
+                },
+                template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+            });
+
+            Vue.component('mycomp', {
+                data: function () {
+                    return {
+                        title: 'My Test Title'
+                    }
+                },
+                template: '<p>{{title}}</p>'
+            });
+
+            var vm = new Vue({ 
+                el: '#components-demo' 
+            }); 
+
+            var vm2 = new Vue({ 
+                el: '#components-demo2' 
+            });
+        </script>
+   </body>
+</html>

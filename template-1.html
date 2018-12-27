@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VueJs template - interpolation</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+    <!-- text -->
+    <span>Message: {{ msg }}</span><br />
+    <span v-once>这个将不会改变: {{ msg }}</span>
+
+
+    <!-- html -->
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                msg: 'Message text content',
+                rawHtml: '<span style="color:red">This should be red</span>'
+            }
+        });
+    </script>
+</body>
+
+</html>

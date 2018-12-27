@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VueJs template - interpolation</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ number + 1 }}
+
+        {{ ok ? 'YES' : 'NO' }}
+
+        {{ message.split('').reverse().join('') }}
+
+        <div v-bind:id="'list-' + id"></div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                number: '100',
+                ok: true,
+                message: 'This is my test!',
+                id: '900'
+            }
+
+        });
+
+        var textList = document.getElementById('list-900');
+        textList.innerHTML = "set text";
+
+    </script>
+</body>
+
+</html>
