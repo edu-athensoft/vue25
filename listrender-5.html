@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <pre>
+        push()
+        pop()
+        shift()
+        unshift()
+        splice()
+        sort()
+        reverse()
+    </pre>
+    <div id="v-for-object">
+        <div v-for="item in items" :key="item.id">
+            {{item.id}} - {{item.name}}
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var example2 = new Vue({
+            el: '#v-for-object',
+            data: {
+                items: [
+                    { id: 0, name: 'John' },
+                    { id: 1, name: 'Smith' },
+                    { id: 2, name: 'Tom' }
+                ]
+            }
+        });
+
+        example2.items.push({ id: 3, name: 'Tony' })
+    </script>
+</body>
+
+</html>

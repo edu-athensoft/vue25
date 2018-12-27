@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="intro">
+        <h1 v-if="ok">Yes</h1>
+        <h1 v-else>No</h1>
+
+        <br />
+        <template v-if="ok">
+            <h1>Title</h1>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+        </template>
+
+        <br />
+        <div v-if="Math.random() > 0.5">
+            Now you see me
+        </div>
+        <div v-else>
+            Now you don't
+        </div>
+
+        <br />
+        <div v-if="Math.random() <= 0.25">
+                A
+              </div>
+              <div v-else-if="Math.random() >= 0.25 && Math.random() &lt;= 0.5">
+                B
+              </div>
+              <div v-else-if="Math.random() >= 0.5 && Math.random() &lt;= 0.75">
+                C
+              </div>
+              <div v-else>
+                Not A/B/C
+              </div>
+    </div>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                ok: true
+            }
+        });
+    </script>
+</body>
+
+</html>

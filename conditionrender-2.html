@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="intro">
+            <h1 v-show="ok">Hello!</h1>
+            <h1 v-show="ok">Don't show!</h1>
+    </div>
+    <script type="text/javascript">
+        var vue_det = new Vue({
+            el: '#intro',
+            data: {
+                ok: true
+            }
+        });
+    </script>
+</body>
+
+</html>

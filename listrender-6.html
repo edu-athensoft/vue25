@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/vue/vue.js"></script>
+</head>
+
+<body>
+    <pre>
+        filter()
+        concat()
+        slice()
+    </pre>
+    <div id="v-for-object">
+        <div v-for="item in items" :key="item.id">
+            {{item.message}}
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var example1 = new Vue({
+            el: '#v-for-object',
+            data: {
+                items: [
+                    { message: 'JoFoohn' },
+                    { message: 'Smith' },
+                    { message: 'TomFoo' }
+                ]
+            }
+        });
+
+        example1.items = example1.items.filter(function (item) {
+            return item.message.match(/Foo/)
+        });
+
+        console.log(example1.items.length)
+
+        example1.$set(example1.items);
+    </script>
+</body>
+
+</html>
